@@ -63,16 +63,18 @@ hr {
     /*position: relative;
     border-bottom: 1px dotted black;*/
 }
+
+
 .tooltip:after {
     position: absolute;
-    padding: 0px;
+    padding: 5px;
     border: 1px solid #fff;
     background-color: #1FDA9A;
     font-size: .9em;
     color: black;
     content: attr(data-tooltip);
     min-width: 250px;
-    min-height:60px;
+    /* min-height:60px; */
     opacity: 3;
     transition: all .1s ease-in-out .25s;
     visibility: hidden;
@@ -329,7 +331,7 @@ to persuade someone to do what you want, especially in a dishonest way
 
 <h1> O</h1>
 <ul>
-ip"data-tooltip="">oblique </li>
+<li class="tooltip" data-tooltip="not expressed in a direct way SYN indirect">oblique </li>
 <li class="tooltip"data-tooltip="not well known and usually not very important
 ">obscure </li>
 <li class="tooltip"data-tooltip="noisy and refusing to do what someone asks → awkward
