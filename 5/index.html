@@ -1,0 +1,166 @@
+<html lang="en" dir="ltr">
+  <head>
+    <header>
+    <p> <a href="../index.html">Home</a></p>
+    </header>
+    <meta charset="utf-8">
+    <title>Day 5_Season Portfolio</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+  </head>
+  <body>
+    <style>
+      p{
+        font-size:20px;
+      }
+      * {
+        box-sizing: content-box;
+      }
+
+      body {
+        background-color: lightgrey;
+        padding:20px;
+      }
+      .main {
+  max-width: 1000px;
+  margin: auto;
+}
+.row {
+  margin: 10px -16px;
+}
+      .row > .column {
+        padding: 8px;
+      }
+      .column {
+        width: 23%;
+        display: none;
+        float:left;
+      }
+      .row:after {
+        content: "";
+        display: table;
+        clear: both;
+      }
+      .content {
+        background-color: white;
+        padding: 10px;
+
+      }
+
+      .show {
+        display: flex;
+      }
+      .btn {
+        width: 10%;
+        background-color:black;
+        text-align:center;
+        color:white;
+        type-weight:bold;
+        font-size:17px;
+        padding: 10px;
+      }
+
+
+      .btn:hover {
+        background-color: teal;
+        color: white;
+        type-weight:bold;
+        opacity:0.3;
+      }
+      h1{
+        text-align:center;
+        width:700px;
+        margin:auto;
+        padding:20px;
+      }
+      h1::first-letter{
+        top:12.5px;
+        left:10px;
+        width:63px;
+        height:110px;
+        border:1px solid black;
+        background-color:white;
+}
+
+</style>
+<h1> Day 5 - Seasons' Portfolio</h1>
+<h1>Click at the button to look at the sorted images </h1>
+  <div id="myBtnContainer">
+    <button class="btn active" onclick="filterSelection('all')"> Show all</button>
+    <button class="btn" onclick="filterSelection('summer')"> Summer</button>
+    <button class="btn" onclick="filterSelection('fall')"> Fall</button>
+    <button class="btn" onclick="filterSelection('winter')"> Winter</button>
+    <button class="btn" onclick="filterSelection('spring')"> Spring</button>
+  </div>
+
+  <div class="row">
+    <div class="column summer"><div class="content"><img src="summer1.jpg" alt="Summer" style="width:100%;height:30%"></div></div>
+    <div class="column summer"><div class="content"><img src="summer2.jpg" alt="Summer" style="width:100%;height:30%"></div></div>
+    <div class="column summer"><div class="content"><img src="summer4.jpg" alt="Summer" style="width:100%;height:30%"></div></div>
+
+
+    <div class="column fall"><div class="content"><img src="fall1.jpg" alt="Fall" style="width:100%;height:30%"></div></div>
+    <div class="column fall"><div class="content"><img src="fall2.jpg" alt="Fall" style="width:100%;height:30%"></div></div>
+    <div class="column fall"><div class="content"><img src="fall3.jpg" alt="Fall" style="width:100%;height:30%"></div></div>
+    <div class="column fall"><div class="content"><img src="fall4.jpg" alt="Fall" style="width:100%;height:30%"></div></div>
+
+
+    <div class="column winter"><div class="content"><img src="winter1.jpg" alt="Winter" style="width:100%;height:30%"></div></div>
+    <div class="column winter"><div class="content"><img src="winter3.jpg" alt="Winter" style="width:100%;height:30%"></div></div>
+    <div class="column winter"><div class="content"><img src="winter4.jpg" alt="Winter" style="width:100%;height:30%"></div></div>
+    <div class="column winter"><div class="content"><img src="winter6.jpg" alt="Winter" style="width:100%;height:30%"></div></div>
+
+
+
+    <div class="column spring"><div class="content"><img src="spring2.jpg" alt="Spring" style="width:100%;height:30%"></div></div>
+    <div class="column spring"><div class="content"><img src="spring3.jpg" alt="Spring" style="width:100%;height:30%"></div></div>
+    <div class="column spring"><div class="content"><img src="spring1.jpg" alt="Spring" style="width:100%;height:30%"></div></div>
+          </div>
+
+
+          <script>
+          filterSelection("all")
+          function filterSelection(c) {
+            var x, i;
+            x = document.getElementsByClassName("column");
+            if (c == "all") c = "";
+            for (i = 0; i < x.length; i++) {
+              w3RemoveClass(x[i], "show");
+              if (x[i].className.indexOf(c) > -1) w3AddClass(x[i], "show");
+            }
+          }
+
+          function w3AddClass(element, name) {
+            var i, arr1, arr2;
+            arr1 = element.className.split(" ");
+            arr2 = name.split(" ");
+            for (i = 0; i < arr2.length; i++) {
+              if (arr1.indexOf(arr2[i]) == -1) {element.className += " " + arr2[i];}
+            }
+          }
+
+          function w3RemoveClass(element, name) {
+            var i, arr1, arr2;
+            arr1 = element.className.split(" ");
+            arr2 = name.split(" ");
+            for (i = 0; i < arr2.length; i++) {
+              while (arr1.indexOf(arr2[i]) > -1) {
+                arr1.splice(arr1.indexOf(arr2[i]), 1);
+              }
+            }
+            element.className = arr1.join(" ");
+          }
+
+          var btnContainer = document.getElementById("myBtnContainer");
+          var btns = btnContainer.getElementsByClassName("btn");
+          for (var i = 0; i < btns.length; i++) {
+            btns[i].addEventListener("click", function(){
+              var current = document.getElementsByClassName("active");
+              current[0].className = current[0].className.replace(" active", "");
+              this.className += " active";
+            });
+          }
+          </script>
+
+
+
+      </body>
