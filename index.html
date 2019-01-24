@@ -13,7 +13,7 @@
     background: url(book.jpg) no-repeat center center;
  background-size: cover;
   }
-  h1 {
+  h1{
       font-size: 70px;
       color: maroon;
       margin: 15px;
@@ -21,10 +21,12 @@
       padding: 15px;
       text-align: center;
   }
+
+
   div, p {
     font-family: Arial;
     letter-spacing: 2px;
-    line-height: 1;
+    line-height: 1.3;
     font-size: 20px;
     font-weight:bold;
     color: #5f5f5f;
@@ -80,27 +82,40 @@ li a {
 li a:hover {
   background-color: maroon;
 }
-
+body{
+  counter-reset:day 10;
+}
+p::before {
+  counter-increment: day -1;
+  content: "Day " counter(day) ": ";
+}
 
   </style>
 </head>
 <body>
-<h1>Hi!</h1>
+<h1>Hi and Wellcome on my page!</h1>
   <br>
   <br>
   <div>My name is Olga Rublova and I'm making <br>
     <span class="blue">100 projects in 100 days </span> </div> <br>
 
      <div>I've got inspired by a <a href="https://www.100daysofcode.com/" target="_blank">
-       100 days of Code Challenge</a> and <br> decided to do something like that on my own.</div>
+       100 days of Code Challenge</a> and <a href="https://jenniferdewalt.com/index.html"
+       target="_blank">Jennifer Dewalt</a> and <br> decided to do something like that on my own.</div>
+
+       <div>These are my very first steps in Web-Design.<br>
+       I've been learning HTML&CSS only for a 4-5 days before my start.<br>
+       I devote all my time to land a Junior Front-End Position one day.</div><br>
 <br>
-<p><a href="7/index.html">Day7_Bouncing_Heart</a></p>
-<p><a href="6/index.html">Day6_Image_Map</a></p>
-<p><a href="5/index.html">Day5_Four_Season_Portfolio</a></p>
-<p><a href="4/index.html">Day4_Vocabulary</a></p>
-<p><a href="3/index.html">Day3_Polaroid_Images</a></p>
-<p><a href="2/index.html">Day2_Application_Form</a></p>
-<p><a href="1/index.html">Day1_My_favourite_books</a></p>
+<p><a href="9/index.html">Shaking Smiles</a></p>
+<p><a href="8/index.html">Dropdown Forms</a></p>
+<p><a href="7/index.html">Palette</a></p>
+<p><a href="6/index.html">Image Map</a></p>
+<p><a href="5/index.html">Four Seasons' Portfolio</a></p>
+<p><a href="4/index.html">Vocabulary</a></p>
+<p><a href="3/index.html">Polaroid Images</a></p>
+<p><a href="2/index.html">Application Form</a></p>
+<p><a href="1/index.html">My favourite books</a></p>
 
 </body>
 </html>
