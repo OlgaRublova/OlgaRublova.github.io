@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Pallette</title>
+  </head>
+  <body>
+    <style>
+
+
+.container{
+  display:block;
+  width:800px;
+  height:500px;
+  border:2px solid black;
+  border-radius: 10%;
+  position:relative;
+  margin:auto;
+}
+.circle{
+  width:180px;
+  height:180px;
+  border-radius: 50%;
+  border: 2px solid black;
+  opacity: 0.8;
+}
+
+.circle:hover{
+  opacity:1.0;
+  border: 3px solid black;
+  transform: scale(1.25);
+  z-index: 1;
+  animation: shake 0.5s;
+  animation-iteration-count: infinite;
+}
+@keyframes shake {
+  0% { transform: translate(1px, 1px) rotate(0deg); }
+  10% { transform: translate(-1px, -2px) rotate(-3deg); }
+  20% { transform: translate(-3px, 0px) rotate(3deg); }
+  30% { transform: translate(3px, 2px) rotate(0deg); }
+  40% { transform: translate(1px, -1px) rotate(3deg); }
+  50% { transform: translate(-1px, 2px) rotate(-3deg); }
+  60% { transform: translate(-3px, 1px) rotate(0deg); }
+  70% { transform: translate(3px, 1px) rotate(-3deg); }
+  80% { transform: translate(-1px, -1px) rotate(3deg); }
+  90% { transform: translate(1px, 2px) rotate(0deg); }
+  100% { transform: translate(1px, -2px) rotate(-1deg); }
+}
+
+#blue {
+position: absolute;
+background-color: blue;
+top:280px;
+left:20px;
+}
+#yellow {
+  background-color: gold;
+  position: absolute;
+  top:280px;
+left:213px;
+}
+
+#purple {
+  background-color: purple;
+  position: absolute;
+  top:280px;
+right:210px;
+}
+
+#brown {
+  background-color: brown;
+  position: absolute;
+  top:280px;
+  right:20px;
+}
+#red {
+  background-color: red;
+  position: absolute;
+left:20px;
+bottom: 290px;
+}
+
+#green {
+  background-color: lightseagreen;
+  position: absolute;
+left:213px;
+bottom: 290px;
+}
+#white {
+  background-color: white;
+  position: absolute;
+  bottom: 290px;
+  right: 210px;
+}
+
+#black {
+  background-color: black;
+  position: absolute;
+  right:20px;
+  bottom: 290px;
+}
+
+img{
+  position: absolute;
+  top:250px;
+  bottom:250px;
+  z-index: 100;
+}
+
+h1{
+  background-image: url(stroke.png);
+  background-repeat: no-repeat;
+  background-size: 20%;
+  padding:20px;
+  font-size: xx-large;
+  background-position: center;
+text-align: center;
+margin-bottom: 100px;
+}
+.bubble img{
+  transform: rotate(-95deg);
+}
+.penzlyk1 img {
+  transform: rotate(-95deg);
+}
+</style>
+<h1>A little painting???</h1>
+
+<div class="container">
+
+<div class="circle" id="blue"> </div>
+<div class="circle" id="red"> </div>
+<div class="circle" id="green"> </div>
+<div class="circle" id="black"> </div>
+<div class="circle" id="white"> </div>
+<div class="circle" id="brown"> </div>
+<div class="circle" id="purple"> </div>
+<div class="circle" id="yellow"> </div>
+</div>
+<div class="bubble"> <img src="bubble.png" height="500" weight="900"></div>
+<div class="penzlyk"> <img src="penzlyk1.png" height="500" weight="100"></div>
+</div>
+    </body>
+</html>
