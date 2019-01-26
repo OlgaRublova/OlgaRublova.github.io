@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html>
+<title>Day_8_Animation_Button</title>
+<head>
+  <p> <a href="../index.html">Home</a></p>
+  <body>
+    <style>
+    p a {
+      color: #222;
+      font-family: 'Open Sans', sans-serif;
+      font-size: 25px;
+    }
+    </style>
+  </body>
+</head>
+
+<style>
+.button_container{
+  width:400px;
+  height:500px;
+  display: block;
+  margin:auto;
+}
+
+.button{
+  position: relative;
+  background-color: white;
+  border: 3px solid black;
+  width: 350px;
+  height: 70px;
+  margin-bottom:40px;
+  text-align:center;
+  padding:0px;
+  font-family: sans-serif;
+  border-radius: 5px;
+  box-shadow: 6px 8px grey;
+}
+
+.button:hover{
+  box-shadow: 0px 0px grey;
+}
+
+
+div.button div.icon img.icon {
+  position: absolute;
+  left:5px;
+  top:10px;
+  z-index:2;
+}
+
+div.button div.icon img.check {
+  position: absolute;
+  right:5px;
+  top:4px;
+  z-index:1;
+  filter: grayscale(100%);
+}
+
+.register{
+  font-size: 15px;
+  font-weight: bold;
+  text-align: center;
+  position: absolute;
+  top:15px;
+  right:63px;
+}
+
+.download{
+  font-size: 20px;
+  font-weight: bold;
+  text-align: center;
+  bottom:10px;
+  right:120px;
+  position: absolute;
+  color:red;
+}
+.dollar{
+  color:black;
+  font-size: 35px;
+  font-weight: bold;
+  position: absolute;
+  left:5px;
+  top:14px;
+  z-index:-1;
+}
+ div.button:hover div.icon img.icon{
+   opacity: 0;
+   transform:scale(1.2);
+   cursor:default;
+
+}
+ div.button:hover .dollar{
+   z-index: 1;
+ }
+ div.button:hover div.icon img.check{
+  filter: grayscale(0%);
+}
+h1{
+  color: black;
+  font-family: sans-serif;
+  text-align: center;
+}
+</style>
+
+
+<body>
+  <h1> Click me!</h1>
+  <div class="button_container">
+
+    <div class="button">
+      <span class="register">Register today and get 10% off</span> </br>
+      <span class="download">Download</span>
+      <span class="dollar">$25</span>
+      <div class="icon" id="money"><img class="icon" src="money.svg" height="50" width="50"></div>
+      <div class="icon"><img class="check" src="https://img.icons8.com/color/48/000000/checked-checkbox.png" height="60" width="60"></div>
+    </div>
+
+    <div class="button">
+      <span class="register">Register today and get 10% off</span></br>
+      <span class="download">Download</span>
+      <span class="dollar">$25</span>
+      <div class="icon" id="card"> <img class="icon" src="card.svg" height="50" width="50"></div>
+      <div class="icon check"><img  class="check" src="https://img.icons8.com/color/48/000000/checked-checkbox.png" height="60" width="60"></div>
+    </div>
+
+
+    <div class="button">
+      <span class="register">Register today and get 10% off</span></br>
+      <span class="download">Download</span>
+      <span class="dollar">$25</span>
+      <div class="icon" id="calc"> <img class="icon" src="calc.svg" height="50" width="50"></div>
+      <div class="icon"><img class="check" src="https://img.icons8.com/color/48/000000/checked-checkbox.png" height="60" width="60"></div>
+    </div>
+
+
+    <div class="button">
+      <span class="register">Register today and get 10% off</span></br>
+      <span class="download">Download</span>
+      <span class="dollar">$25</span>
+      <div class="icon" id="envelope"> <img class="icon" src="envelope.svg" height="50" width="50"></div>
+      <div class="icon"><img class="check" src="https://img.icons8.com/color/48/000000/checked-checkbox.png" height="60" width="60"></div>
+    </div>
+  </div>
+
+</style>
+
+
+</body>
