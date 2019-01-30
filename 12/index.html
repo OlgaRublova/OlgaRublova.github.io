@@ -13,6 +13,115 @@
   </head>
   <body>
     <style>
+    body {
+      background-color: midnightblue;
+    }
+
+    .moon{
+      width:150px;
+      height:150px;
+      border-radius: 50%;
+      position:absolute;
+      top:20%;
+      left:30%;
+      display:block;
+      background-color: darkkhaki;
+      box-shadow: inset 0px 0px 70px 0px white;
+zoom:0.8;
+animation: pulse 1s ease infinite;
+
+}
+@keyframes pulse {
+0% { transform: scale(0.5) rotate(-45deg);
+}
+50% { transform: scale(0.8) rotate(-45deg);
+}
+100% { transform: scale(1) rotate(-45deg);
+}
+
+    }
+      .star{
+      margin: 50px 0;
+      position: relative;
+      display: block;
+      color: white;
+      width: 0px;
+      height: 0px;
+      border-right: 100px solid transparent;
+      border-bottom: 70px solid ;
+      border-left: 100px solid transparent;
+      transform: rotate(35deg);
+      zoom:0.25;
+      box-shadow: inset 0px 0px 70px 0px black;
+      animation: pulse 1s ease infinite;
+
+      }
+      @keyframes pulse {
+      0% { transform: scale(1) rotate(-45deg);
+      }
+      50% { transform: scale(1.5) rotate(-45deg);
+      }
+      100% { transform: scale(1) rotate(-45deg);
+      }
+    }
+    .star:before {
+      border-bottom: 80px solid white;
+      border-left: 30px solid transparent;
+      border-right: 30px solid transparent;
+      position: absolute;
+      height: 0;
+      width: 0;
+      top: -45px;
+      left: -65px;
+      display: block;
+      content: '';
+      transform: rotate(-35deg);
+    }
+    .star:after {
+      position: absolute;
+      display: block;
+      color: red;
+      top: 3px;
+      left: -105px;
+      width: 0px;
+      height: 0px;
+      border-right: 100px solid transparent;
+      border-bottom: 70px solid white;
+      border-left: 100px solid transparent;
+      transform: rotate(-70deg);
+      content: '';
+    }
+.star.one{
+  top:20%;
+  left:50%;
+}
+.star.two{
+  top:10%;
+  left:70%;
+}
+.star.three{
+  top:30%;
+  left:85%;
+}
+.star.four{
+  bottom:40%;
+  right:30%;
+}
+.star.five{
+  top:40%;
+  left:65%;
+}
+.moon:hover, .star:hover{
+  transform:scale(1.2);
+}
       </style>
+<div class="moon"> </div>
+<div class="star one"> </div>
+<div class="star two"> </div>
+<div class="star three"> </div>
+<div class="star four"> </div>
+<div class="star five"> </div>
+<div class="clouds"></div>
+
     </body>
 </html>
