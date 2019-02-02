@@ -1,0 +1,121 @@
+<html>
+<head>
+  <p> <a href="../index.html">Home</a></p>
+  <body>
+    <style>
+    p a {
+      color: white;
+      font-family: 'Open Sans', sans-serif;
+      font-size: 25px;
+    }
+    </style>
+  </body>
+  </head>
+  <body>
+    <style>
+      body {
+        background: black;
+      }
+      .container{
+        position:absolute;
+        top: 275px;
+        left: 700px;
+      }
+      .candle {
+        background: white;
+        width: 60px;
+        height: 300px;
+        position: absolute;
+        top: 120px;
+        left: calc(50% - 30px);
+        border-radius: 40px / 20px;
+      }
+      .candle:after {
+        background: gainsboro;
+        width: 60px;
+        height: 30px;
+        display: block;
+        position: absolute;
+        top: 0;
+        left: 0;
+        content: "";
+        border-radius: 40px / 20px;
+      }
+      .match {
+        background: whitesmoke;
+        width: 4px;
+        height: 40px;
+        position: absolute;
+        top: 95px;
+        left: calc(50% - 2px);
+        border-radius: 4px / 2px;
+      }
+      .match > a {
+        width: 100%;
+        height: 100%;
+        display: block;
+      }
+      .match:target ~ .fire {
+        background: darkorange;
+        width: 60px;
+        height: 80px;
+        opacity: 0.80;
+        position: absolute;
+        top: 40px;
+        left: calc(50% - 30px);
+        border-radius: 120px 120px 80px 80px / 240px 240px 80px 80px;
+        box-shadow: 0 -1px 3px 1px darkorange;
+        animation: candle 0.1s infinite;
+      }
+      .match:target ~ .fire:after {
+        background: gold;
+        width: 36px;
+        height: 50px;
+        content: "";
+        position: absolute;
+        bottom: 0;
+        left: calc(50% - 18px);
+        opacity: 0.90;
+        border-radius: 120px 120px 80px 80px / 240px 240px 60px 60px;
+        box-shadow: 0 -1px 2px 1px gold;
+      }
+      .match:target ~ .fire > a {
+        width: 100%;
+        height: 100%;
+        display: block;
+      }
+      @keyframes candle {
+        0% { height: 80px; }
+        100% { height: 90px; top: 30px; }
+      }
+      .match:target ~ .light {
+        background: orange;
+        width: 0;
+        height: 0;
+        position: absolute;
+        top: 10px;
+        left: calc(50%);
+        opacity: 0.50;
+        box-shadow: 0 0 200px 150px orange;
+        animation: light 0.1s infinite;
+      }
+      @keyframes light {
+        0% { box-shadow: 0 0 200px 150px orange; }
+        100% { box-shadow: 0 0 220px 160px orange; }
+      }
+      div h1 {
+        color:white;
+        position:absolute;
+        top:200px;
+        right:400px;
+}
+        </style>
+        <div><h1> Click my match</h1></div>
+  <div class="container">
+  <div class="candle"></div>
+  <div id="match" class="match"><a href="#match"></a></div>
+  <div class="fire"><a href="#"></a></div>
+  <div class="light"></div>
+  </div>
+  </body>
+  </html>
