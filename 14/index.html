@@ -13,127 +13,190 @@
   </head>
   <body>
     <style>
-    body{
-      font-family: Arial;
-      text-align: center;
-      line-height: 1.8;
-      font-size: 25px;
-    }
-    h1{
-      font-size: 45px;
-      font-weight: normal;
-    }
-    p{
-      font-size: 20px;
-
-    }
-
-    .container{
-      width:1050px;
-      height:550px;
-      display: block;
-      margin: auto;
-    }
-    .box{
-      width:300px;
-      height:330px;
-      border: 1px solid lightgrey;
-      border-radius: 7px;
-      display: block;
-      text-align: center;
-      float:left;
-      margin-right:30px;
-    }
-
-    .first{
-      font-size: 20px;
-      display: block;
-      background-color: gainsboro;
-      border-radius: 7px;
-      height:50px;
-      width:300px;
-      line-height: 2.4;
-
-    }
-    .white{
-      font-size: 38px;
-      color:black;
-    }
-
-    .text{
-      font-size: 15px;
-      color:black;
-    }
-    .button{
-      width:300px;
-      height:20px;
-      padding:10px;
-      margin:5px;
-      border:1px solid dodgerblue;
-      border-radius: 5px;
-      font-size: 18px;
-      text-decoration: none;
-    }
-    #left_button{
-      background-color: white;
-      color:dodgerblue;
-    }
-    #left_button:hover{
-      background-color: dodgerblue;
-      color:white;
-    }
-    #right_button, #center_button {
-      background-color: dodgerblue;
-      color: white;
+    .teddy {
+	font-size: calc(50vmin / 260);
+	position: relative;
+	margin: auto;
+	width: 260em;
+	height: 330em;
 }
-    #right_button:hover, #center_button:hover{
-      background-color: blue;
-      color:white;
-    }
-  </style>
-
-
-<h1>Pricing</h1>
-<p>Quickly build an effective pricing table for your potential customers with this</br>
-  Bootstrap example. It’s built with default Bootstrap components and utilities with</br>
-  little customization.</p></br>
-
-<div class="container">
-
-<div class="box left">
-<span class="first">Free</span>
-<span class="white">$0 </span>/ mo </br>
-<span class="text">
-    10 users included</br>
-    2 GB of storage</br>
-    Email support</br>
-    Help center access</span></br></br>
-<a href="#" class="button" id="left_button">Sign up for free!</a>
+.teddy div {
+	position: absolute;
+}
+.right-ear, .left-ear, .head, .right-eye, .left-eye, .mouth-area, .nose,
+.nose-inner, .right-cheek, .left-cheek, .body, .paw, .foot {
+	border-radius: 50%;
+}
+.right-ear, .left-ear {
+	background: peru;
+	box-shadow: 0 0 0 20em rgb(190,120,60) inset;
+	width: 80em;
+	height: 80em;
+}
+.right-ear {
+	left: 20em;
+}
+.left-ear {
+	right: 20em;
+}
+.head {
+	background: rgb(190,120,60);
+	width: 160em;
+	height: 160em;
+	right: 0;
+	left: 0;
+	margin: auto;
+	z-index: 1;
+}
+.right-eye, .left-eye, .nose-inner {
+	background: rgb(255, 255, 255);
+}
+.right-eye, .left-eye {
+	box-shadow: 2em -2em 0 8em inset;
+	top: 65em;
+	width: 20em;
+	height: 20em;
+}
+.right-eye {
+	left: 45em;
+}
+.left-eye {
+	right: 45em;
+}
+.mouth-area {
+	background: rgb(230,160,90);
+	right: 0;
+	bottom: 5em;
+	left: 0;
+	margin: auto;
+	width: 100em;
+	height: 70em;
+}
+.nose {
+	background: rgb(0,0,0);
+	top: 15em;
+	right: 0;
+	left: 0;
+	margin: auto;
+	width: 40em;
+	height: 30em;
+}
+.nose-inner {
+	top: 3em;
+	right: 8em;
+	width: 10em;
+	height: 8em;
+}
+.right-cheek, .left-cheek {
+	bottom: 10em;
+	width: 30em;
+	height: 30em;
+}
+.right-cheek {
+	box-shadow: -2em -2em 0 0 rgb(115,80,45) inset;
+	left: 20em;
+}
+.left-cheek {
+	box-shadow: 2em -2em 0 0 rgb(115,80,45) inset;
+	right: 20em;
+}
+.body {
+	background: rgb(230,160,90);
+	box-shadow: 0 0 0 24em rgb(190,120,60) inset;
+	margin: auto;
+	right: 0;
+	bottom: 22em;
+	left: 0;
+	width: 170em;
+	height: 190em;
+}
+.right-arm, .left-arm {
+	background: rgb(170,100,50);
+	top: 130em;
+	width: 70em;
+	height: 60em;
+}
+.right-arm {
+	border-radius: 70em 0 0 0 / 60em 0 0 0;
+	left: 0;
+}
+.right-arm .arm-inner {
+	border-radius: 50em 0 0 0 / 80em 0 0 0;
+	box-shadow: 22em 22em 0 0 rgb(170,100,50) inset;
+	left: 55em;
+}
+.left-arm, .left-arm .paw {
+	right: 0;
+}
+.left-arm {
+	border-radius: 0 70em 0 0 / 0 60em 0 0;
+}
+.left-arm .arm-inner {
+	border-radius: 0 50em 0 0 / 0 80em 0 0;
+	box-shadow: -22em 22em 0 0 rgb(170,100,50) inset;
+	right: 55em;
+}
+.arm-inner {
+	width: 50em;
+	height: 80em;
+	bottom: 0;
+}
+.paw {
+	background: rgb(190,120,60);
+	width: 80em;
+	height: 60em;
+	top: 30em;
+}
+.right-leg, .left-leg {
+	background: rgb(170,100,50);
+	border-radius: 45em 45em 0 0 / 70em 70em 0 0;
+	bottom: 40em;
+	width: 90em;
+	height: 70em;
+}
+.right-leg  {
+	left: 10em;
+}
+.left-leg  {
+	right: 10em;
+}
+.foot  {
+	background: rgb(230,160,90);
+	box-shadow: 0 5em 0 10em rgb(190,120,60) inset;
+	width: 100%;
+	height: 80em;
+	top: 30em;
+}
+</style>
+<div class="teddy">
+  <div class="right-ear"></div>
+  <div class="left-ear"></div>
+  <div class="head">
+    <div class="right-eye"></div>
+    <div class="left-eye"></div>
+    <div class="mouth-area">
+      <div class="right-cheek"></div>
+      <div class="left-cheek"></div>
+      <div class="nose">
+        <div class="nose-inner"></div>
+      </div>
+    </div>
+  </div>
+  <div class="body"></div>
+  <div class="right-arm">
+    <div class="arm-inner"></div>
+    <div class="paw"></div>
+  </div>
+  <div class="left-arm">
+    <div class="arm-inner"></div>
+    <div class="paw"></div>
+  </div>
+  <div class="right-leg">
+    <div class="foot"></div>
+  </div>
+  <div class="left-leg">
+    <div class="foot"></div>
+  </div>
 </div>
-
-
-<div class="box center">
-<span class="first">Pro</span>
-<span class="white">$15  </span>/ mo </br>
-<span class="text">
-    20 users included</br>
-    10 GB of storage</br>
-    Priority email support</br>
-    Help center access</span></br></br>
-<a href="#" class="button"id="center_button">Get started</a>
-</div>
-
-<div class="box right">
-<span class="first">Enterprise</span>
-<span class="white">$29 </span>/ mo </br>
-<span class="text">30 users included</br>
-    15 GB of storage</br>
-    Phone and email support</br>
-    Help center access</span></br></br>
-<a href="#" class="button" id="right_button">Contact us</a>
-
-</div>
-</div>
-
-    </body>
+</head>
 </html>
