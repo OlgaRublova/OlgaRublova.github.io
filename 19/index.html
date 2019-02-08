@@ -1,0 +1,101 @@
+<html>
+<head>
+
+  <p> <a href="../index.html">Home</a></p>
+  <body>
+    <style>
+    p a {
+      color: #222;
+      font-family: 'Open Sans', sans-serif;
+      font-size: 20px;
+    }
+    </style>
+  </body>
+  </head>
+  <body>
+    <style>
+    body{
+      background-color: lavender;
+    }
+    div {
+      margin-left: 50%;
+}
+    li{
+      display:inline-flex;
+      align-items: center;
+      justify-content: center;
+      position:relative;
+      width: 150px;
+      height: 45px;
+      background: whitesmoke;
+      border-radius: 45px;
+      font-family: "Montserrat", sans-sans-serif;
+      font-size: 20px;
+      text-decoration: none;
+
+}
+      li:hover::before, li:hover::after{
+      content: "";
+      position:absolute;
+      width: 150px;
+      height: 45px;
+      background-color: purple;
+      border-radius: 25px;
+      z-index: -1;
+      animation: 2s clockwise infinite;
+}
+
+    @keyframes clockwise {
+  0% {
+    top: -5px;
+    left: 0;
+  }
+  12%{
+    top: -2px;
+    top:2px;
+  }
+  25% {
+    top: 2px;
+    left: 5px;
+  }
+  37%{
+    top: 2px;
+    left: 2px;
+  }
+  50%{
+    top: 5px;
+    left: 0;
+  }
+  62%{
+    top: 2px;
+    left: -2px;
+  }
+  75%{
+    top:0;
+    left: -5px;
+  }
+  87%{
+    top: -2px;
+    left: -4px;
+  }
+  100%{
+    top:-4px;
+    left:0;
+  }
+}
+a:link, li:visited, li:hover, li:active{
+  text-decoration: none;
+}
+    </style>
+<div>
+    <ul>
+  <li><a href="#">Home</a></li>
+  <li><a href="#">About</a></li>
+  <li><a href="#">Service</a></li>
+  <li><a href="#">Portfolio</a></li>
+  <li><a href="#">Contact</a></li>
+</ul>
+</div>
+
+  </body>
+  </html>
