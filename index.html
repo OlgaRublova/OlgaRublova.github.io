@@ -1,116 +1,116 @@
 <html>
 <head>
     <title>Olga</title>
+
+    <style type="text/css">
+
+        h1 {
+            font-size: 70px;
+            color: purple;
+            margin: 15px;
+            line-height: 1;
+            padding: 15px;
+            text-align: center;
+        }
+
+        div {
+            font-family: Arial;
+            letter-spacing: 2px;
+            line-height: 1.2;
+            font-size: 20px;
+            font-weight: bold;
+            color: #5f5f5f;
+            text-align: left;
+            padding-left: 50px;
+        }
+
+        p {
+            font-family: Arial;
+            letter-spacing: 2px;
+            line-height: 0.8;
+            font-size: 18px;
+            font-weight: bold;
+            color: #5f5f5f;
+            text-align: left;
+            padding-left: 50px;
+        }
+
+        .blue {
+            color: purple;
+            font-weight: bold;
+            font-size: 25px;
+
+        }
+
+        a:link {
+            text-decoration: none;
+            color: blue;
+            font-weight: bold;
+        }
+
+        a:visited {
+            text-decoration: none;
+            color: midnightblue;
+            font-weight: bold;
+        }
+
+        a:hover {
+            background-color: purple;
+            color: white;
+            font-weight: bold;
+        }
+
+        a:active {
+            color: skyblue;
+        }
+
+        ul {
+            list-style-type: none;
+            overflow: hidden;
+            background-color: tan;
+            font-size: 20px;
+            line-height: 0.9;
+            margin-bottom: 5px;
+            padding: 10px;
+        }
+
+        li {
+            float: right;
+        }
+
+        li a {
+            display: inline-block;
+            color: white;
+            text-align: center;
+            text-decoration: none;
+            padding-left: 10px;
+        }
+
+        li a:hover {
+            background-color: purple;
+        }
+
+        body {
+            counter-reset: day 31;
+        }
+
+        p::before {
+            counter-increment: day -1;
+            content: "Day " counter(day) ": ";
+            color: black;
+            box-sizing: border-box;
+        }
+
+    </style>
+</head>
 <body>
 <ul>
     <li><a href="#github">GitHub</a></li>
     <li><a href="#contact">Contact</a></li>
     <li><a href="#about">About Me</a></li>
 </ul>
-</body>
-<style type="text/css">
 
-    h1 {
-        font-size: 70px;
-        color: purple;
-        margin: 15px;
-        line-height: 1;
-        padding: 15px;
-        text-align: center;
-    }
 
-    div {
-        font-family: Arial;
-        letter-spacing: 2px;
-        line-height: 1.2;
-        font-size: 20px;
-        font-weight: bold;
-        color: #5f5f5f;
-        text-align: left;
-        padding-left: 50px;
-    }
-
-    p {
-        font-family: Arial;
-        letter-spacing: 2px;
-        line-height: 0.8;
-        font-size: 18px;
-        font-weight: bold;
-        color: #5f5f5f;
-        text-align: left;
-        padding-left: 50px;
-    }
-
-    .blue {
-        color: purple;
-        font-weight: bold;
-        font-size: 25px;
-
-    }
-
-    a:link: {
-        text-decoration: none;
-        color: blue;
-        font-weight: bold;
-    }
-
-    }
-    a:visited {
-        text-decoration: none;
-        color: midnightblue;
-        font-weight: bold;
-    }
-
-    a:hover {
-        background-color: purple;
-        color: white;
-        font-weight: bold;
-    }
-
-    a:ative {
-        color: skyblue;
-    }
-
-    ul {
-        list-style-type: none;
-        overflow: hidden;
-        background-color: tan;
-        font-size: 20px;
-        line-height: 0.9;
-        margin-bottom: 5px;
-        padding: 10px;
-    }
-
-    li {
-        float: right;
-    }
-
-    li a {
-        display: inline-block;
-        color: white;
-        text-align: center;
-        text-decoration: none;
-        padding-left: 10px;
-    }
-
-    li a:hover {
-        background-color: purple;
-    }
-
-    body {
-        counter-reset: day 31;
-    }
-
-    p::before {
-        counter-increment: day -1;
-        content: "Day " counter(day) ": ";
-        color: black;
-        box-sizing: border-box;
-    }
-
-</style>
-</head>
-<body>
 <h1>Hi and Wellcome on my page!</h1>
 <br>
 <br>
