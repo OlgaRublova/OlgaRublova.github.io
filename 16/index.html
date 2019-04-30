@@ -1,134 +1,147 @@
 <html>
 <head>
-  <p> <a href="../index.html">Home</a></p>
-  <body>
-    <style>
+    <p><a href="../index.html">Home</a></p>
+<body>
+<style>
     p a {
-      color: #222;
-      font-family: 'Open Sans', sans-serif;
-      font-size: 20px;
+        color: #222;
+        font-family: 'Open Sans', sans-serif;
+        font-size: 20px;
     }
-    </style>
-  </body>
-  </head>
-  <body>
-    <style>
+</style>
+</body>
+</head>
+<body>
+<style>
     * {
-      font-family: Arial;
-      font-size: 17px;
-      color:white;
+        font-family: Arial;
+        font-size: 17px;
+        color: white;
     }
-  h1 {
-    text-align:center;
-    font-weight: bold;
-    font-size: 20px;
-  }
 
-.container {
-border-radius: 7px;
-background-color: gray;
-width:500px;
-height:360px;
-display: block;
-margin: auto;
-}
-.square{
-border-radius: 5px;
-background-color: #00CED1;
-width:500px;
-height:50px;
-padding-top: 5px;
-}
+    h1 {
+        text-align: center;
+        font-weight: bold;
+        font-size: 20px;
+    }
 
-input[type=submit], input[type=text]{
-background-color: #00CED1;
-color: white;
-padding: 10px;
-margin: 8px;
-border-radius: 4px;
-cursor: pointer;
-}
+    .container {
+        border-radius: 7px;
+        background-color: gray;
+        width: 500px;
+        height: 360px;
+        display: block;
+        margin: auto;
+    }
 
-input[type=submit]:hover {
-transform: scale(1.2);
-background-color: red;
-}
+    .square {
+        border-radius: 5px;
+        background-color: #00CED1;
+        width: 500px;
+        height: 50px;
+        padding-top: 5px;
+    }
 
-.left{
-  padding: 5px;
-}
-.submit{
-  padding-left: 205px;
+    input[type=submit], input[type=text] {
+        background-color: #00CED1;
+        color: white;
+        padding: 10px;
+        margin: 8px;
+        border-radius: 4px;
+        cursor: pointer;
+    }
 
-}
+    input[type=submit]:hover {
+        transform: scale(1.2);
+        background-color: red;
+    }
+
+    .left {
+        padding: 5px;
+    }
+
+    .submit {
+        padding-left: 205px;
+
+    }
 </style>
 
 <div class="container">
 
-<div class="square">
-<h1>Calculate you body mass index</h1>
-</div>
+    <div class="square">
+        <h1>Calculate you body mass index</h1>
+    </div>
 
-<div class="left">
-<p>Body mass index (BMI) is a measure of body fat based on height and
-  weight that applies to adult men and women.</p>
+    <div class="left">
+        <p>Body mass index (BMI) is a measure of body fat based on height and
+            weight that applies to adult men and women.</p>
 
 
-<form action="action_page.php">
+        <form action="action_page.php">
 
-<label for="Weight">Weight</label>
-<input type="text" id="weight" name="weight">  kg</br>
+            <label for="Weight">Weight</label>
+            <input type="text" id="weight" name="weight"> kg</br>
 
-<label for="Height">Height in metres</label>
-<input type="text" id="height" name="height">  metre</br>
-</div>
+            <label for="Height">Height in metres</label>
+            <input type="text" id="height" name="height"> metre</br>
+    </div>
 
-<div class="submit">
-<input type="submit" value="Submit" onclick="calc(); return false">
-</div>
-</form>
+    <div class="submit">
+        <input type="submit" value="Submit" onclick="calc(); return false">
+    </div>
+    </form>
 </div>
 <script>
-/*function calc(){
-  alert("ok")
-}*/
-function calc() {
-    var height = (document.getElementById('height').value) / 100;
-    var weight = document.getElementById('weight').value;
+    function calc() {
+        var height = (document.getElementById('height').value);
+        var weight = document.getElementById('weight').value;
 
-    var output = document.getElementById('output');
-    var bmi = Math.round((weight / Math.pow(height, 2)) * 10) / 10;
+        alert(height);
+        alert(weight);
 
-    var result = document.getElementById('result');
-    var text = "";
-    if (height != "" && weight != "") {
-        if (bmi != "NaN" && bmi != 0) {
-            if (bmi % 1 != 0) {
-                output.innerHTML = bmi;
-            } else {
-                output.innerHTML = bmi + ".0";
-            }
-            if (10 <= bmi && bmi < 14) {
-                text = "You are seriously underweight!";
-            } else if (15 <= bmi && bmi < 18.5) {
-                text = "You are slightly underweight.";
-            } else if (18.5 <= bmi && bmi < 25) {
-                text = "You are healthy!";
-            } else if (25 <= bmi && bmi < 30) {
-                text = "You are slightly overweight.";
-            } else if (30 <= bmi && bmi < 40) {
-                text = "You are obese!";
-            } else if (40 <= bmi && bmi < 50) {
-                text = "You are seriously obese!";
-            } else {
-                text = "You should be dead...";
+        var bmi = Math.round((weight / Math.pow(height, 2)) * 10) / 10;
 
-            }
+        alert(bmi);
 
-            result.innerHTML = text;
-        }
     }
-}
+
+    // function calc() {
+    //     var height = (document.getElementById('height').value) / 100;
+    //     var weight = document.getElementById('weight').value;
+    //
+    //     var output = document.getElementById('output');
+    //     var bmi = Math.round((weight / Math.pow(height, 2)) * 10) / 10;
+    //
+    //     var result = document.getElementById('result');
+    //     var text = "";
+    //     if (height != "" && weight != "") {
+    //         if (bmi != "NaN" && bmi != 0) {
+    //             if (bmi % 1 != 0) {
+    //                 output.innerHTML = bmi;
+    //             } else {
+    //                 output.innerHTML = bmi + ".0";
+    //             }
+    //             if (10 <= bmi && bmi < 14) {
+    //                 text = "You are seriously underweight!";
+    //             } else if (15 <= bmi && bmi < 18.5) {
+    //                 text = "You are slightly underweight.";
+    //             } else if (18.5 <= bmi && bmi < 25) {
+    //                 text = "You are healthy!";
+    //             } else if (25 <= bmi && bmi < 30) {
+    //                 text = "You are slightly overweight.";
+    //             } else if (30 <= bmi && bmi < 40) {
+    //                 text = "You are obese!";
+    //             } else if (40 <= bmi && bmi < 50) {
+    //                 text = "You are seriously obese!";
+    //             } else {
+    //                 text = "You should be dead...";
+    //
+    //             }
+    //
+    //             result.innerHTML = text;
+    //         }
+    //     }
+    // }
 </script>
 </body>
 

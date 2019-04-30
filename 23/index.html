@@ -1,0 +1,87 @@
+<html>
+
+<body>
+<style>
+
+    h2, p, span {
+        margin: 0;
+        padding: 0;
+    }
+
+    body {
+        font-family: sans-serif;
+        margin: 0;
+        padding: 0;
+        background-color: #000000;
+        background-image: url("nutritionfacts2016.jpg");
+        background-repeat: no-repeat;
+        background-position: left top;
+    }
+
+    p a {
+        color: #222;
+        font-family: 'Open Sans', sans-serif;
+        font-size: 20px;
+    }
+
+    .ingredient {
+        padding: 2px;
+        background-color: white;
+        margin: auto;
+        width: 248px;
+        height: 472px;
+        opacity: 0.75;
+        position: absolute;
+    }
+
+    .container {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        align-items: flex-start;
+        height: 100%;
+        padding: 0px 0.3em;
+        box-sizing: border-box;
+        border: 2px solid black;
+        border-collapse: separate;
+        background-color: white;
+    }
+    .rectangular {
+        background-color: #222222;
+        width:230px;
+        height:5px;
+    }
+.big{
+    height:20px;
+}
+    p {
+        font-size: 15px;
+    }
+    span{
+        font-family: bold;
+    }
+</style>
+
+<div class="ingredient">
+    <div class="container">
+        <h1>Nutrition Facts</h1>
+        <p>8 servings per container </p>
+        <span>Serving size   2/3 cup (55g)</span>
+        <div class="big rectangular">
+        </div>
+        <span>Amount for serving</span>
+        <h2>Calories 230</h2>
+        <div class="small rectangular">
+        </div>
+        <div class="value">% Daily Value*</div>
+
+        <div class="big rectangular">
+        </div>
+        <div class="small rectangular">
+        </div>
+
+    </div>
+</div>
+</body>
+</html>
