@@ -1,115 +1,68 @@
 <html>
 <head>
-
-  <p> <a href="../index.html">Home</a></p>
+  <title>Alternating Underline
+  </title>
+</head>
   <body>
-    <style>
-    p a {
-      color: #222;
-      font-family: 'Open Sans', sans-serif;
-      font-size: 20px;
-    }
-    </style>
-  </body>
-  </head>
-  <body>
-    <style>
-    h1{
-      font-weight: 600;
-      font-family: 'Titillium Web', sans-serif;
-      font-size: 36px;
-      color: #355681;
-      text-align: center;
+<style>
 
-      }
-
-   body{
-      background-color: pink;
-      box-sizing: border-box;
-    }
-    .lights{
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      flex-flow: column wrap;
-      width:115px;
-      height:360px;
-      background-color: grey;
-      border: 7px solid white;
-      border-radius: 15px;
-      margin-left: 47%;
-      margin-right: 50%;
-    }
-
-    .stick{
-      left:35%;
-      bottom:-27%;
-      background-color: black;
-      width: 25px;
-      height:300px;
-      transform: translate(-70px, 338px);
-      border-bottom-left-radius:10px;
-      border-bottom-right-radius:10px;
-
-    }
-    .color{
-      width:100px;
-      height:100px;
-      border-radius: 50%;
-      border: 2px solid black;
-      margin:3px 5px;
-    }
-
-    .red{
-      animation: red 5s linear normal infinite;
-    }
-    @keyframes red {
-        0% {
-          background: black;
-        }
-        2%, 20% {
-          background-color: red;
-        }
-        42%, 100% {
-          background: black;
-        }
-    }
-    .yellow{
-      animation: yellow 5s linear normal infinite;
-    }
-    @keyframes yellow {
-      0%, 20% {
-    background: black;
+  body{
+    background: rgb(30,30,30);
+    color: white;
+    font-family: sans-serif;
   }
-  22%, 40% {
-    background: yellow;
+  ul{
+    list-style-type: none;
+    position: absolute;
+    left: 200px;
+    top: 80px;
   }
-  42%, 100% {
-    background: black;
-      }
-}
-    .green{
-      animation: green 5s linear normal infinite;
-    }
-    @keyframes green {
-      0%, 40% {
-          background: black;
-        }
-        42%, 80% {
-          background: green;
-        }
-        82%, 100% {
-          background: black;
-        }
-}
+
+  li {
+    min-width: 70px;
+    float: left;
+    font-size: x-large;
+    -webkit-transition: 0.5s ease;
+padding-left:5px;
+  }
+  li:hover{
+     text-shadow: 0px -2px 0px rgba(0,0,0,1), 0 0 5px rgba(255,255,255,0.8),0 -4px 15px rgba(255,255,255,0.5);
+   }
+  li:first-child:hover{
+     left: 0;
+     width: 40px;
+     background: rgba(100,100,200,1);
+   }
+
+  li:nth-of-type(2):hover {
+     left: 50px;
+     width: 40px;
+     background: rgba(200,100,100,1);
+   }
+  li:nth-of-type(3):hover {
+     left: 100px;
+     width: 40px;
+     height: 1px;
+     background: rgba(150,250,250,0.5);
+     box-shadow: 0 0 10px rgba(70,250,250,1);
+   }
+  li:nth-of-type(4):hover {
+     left: 150px;
+     width: 40px;
+     height: 1px;
+     background: rgba(150,250,250,0.5);
+     box-shadow: 0 0 10px rgba(70,250,250,1);
+   }
+  cursor:pointer;
+
 </style>
-<h1> Street lights</h1>
-<div class="lights">
-<div class="color red"> </div>
-<div class="color yellow"> </div>
-<div class="color green"> </div>
-<div class="stick"> </div>
+<ul>
+  <li>home</li>
+  <li>about</li>
+  <li>news</li>
+  <li>contact</li>
+  <div class="under_bar"></div>
+</ul>
+</body>
 
-</div>
-  </body>
-  </html>
+</html>
