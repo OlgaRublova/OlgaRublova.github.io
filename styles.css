@@ -1,0 +1,88 @@
+body {
+    width: 80%;
+    margin: 10vw auto;
+    background-color: black;
+    counter-reset: day 31;
+}
+
+h1 {
+    font-family: "Playfair Display", serif;
+    font-size: 7vw;
+    color:teal;
+    background: linear-gradient(90deg, teal, #ffa500);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+p, div {
+    font-family: "Open Sans", sans-serif;
+    font-size: 1.5em;
+    color: white;
+}
+span{
+    background-image: linear-gradient(120deg, hotpink 0%, #8fd3f4 100%);
+    background-repeat: no-repeat;
+    background-size: 100% 0.1em;
+    background-position: 0 88%;
+    transition: background-size 0.25s linear;
+    color:darkred;
+    font-weight: bold;
+    margin:2px;
+    padding: 5px;
+}
+span:hover{
+    background-size: 110% 88%;
+    font-weight: bolder;
+}
+
+a:link {
+    text-decoration: none;
+    color: #ffa500;
+    font-weight: bold;
+}
+
+a:visited {
+    text-decoration: none;
+    color: tomato;
+    font-weight: bold;
+}
+
+a:hover {
+    background-color: teal;
+    color: white;
+    font-weight: bold;
+}
+
+a:active {
+    color: skyblue;
+}
+
+ul {
+    list-style-type: none;
+    font-size: 20px;
+    margin-bottom: 5px;
+    padding: 10px;
+}
+
+li {
+    float: right;
+}
+
+li a {
+    display: inline-block;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    padding: 20px;
+}
+
+li a:hover {
+    background-color: teal;
+}
+
+
+p::before {
+    counter-increment: day -1;
+    content: "Day " counter(day) ": ";
+    color: teal;
+    box-sizing: border-box;
+}
