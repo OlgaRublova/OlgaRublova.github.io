@@ -1,6 +1,5 @@
 body {
     /*background-image: url("https://topfit.mikado-themes.com/wp-content/uploads/2017/01/h4-line-bckr-3.jpg?id=12548");*/
-    blue line
     /*background-image: url(https://topfit.mikado-themes.com/wp-content/uploads/2017/02/h2-slider-img-2.jpg);//back girl*/
 
     background-repeat: no-repeat;
@@ -10,56 +9,42 @@ body {
     width: 100%;
     height: 100%;
     font-family: 'Montserrat', sans-serif;
+    margin: 0 auto;
+    padding: 10px;
 }
 
+/*main list*/
 ul {
     list-style-type: none;
-    font-size: 12px;
+    font-size: 9px;
     text-transform: uppercase;
-    font-weight: bold;
+    font-weight: bolder;
     margin: 10px 0;
     padding: 12px 12px 3px 4px;
     left: 35%;
     position: absolute;
-}
 
+}
 
 ul li {
     padding: 1px 12px 3px 4px;
     margin: 0 12px 3px 4px;
     display: inline-block;
-}
-ul li ul li{
-    display:block;
-    transition-duration: 0.5s;
-}
-ul li a {
-    color: white;
-    text-decoration: none;
+    position: relative;
 }
 
-ul li a:hover {
-    background: red;
-}
-
-ul li ul a {
-    color: grey;
-    font-weight: normal;
-}
-ul li ul a:hover {
-    background-color: transparent;
-}
-
+/*dropdown*/
 ul li ul {
     visibility: hidden;
-    /*opacity: 0;*/
-    position: absolute;
-    transition: all 0.5s ease;
+    transition: all 0.1s linear;
     margin-top: 1rem;
-    left: 0;
     background: white;
-    width: 8.5rem;
-    border-radius: 3px;
+    width: 8rem;
+    border-radius: 4px;
+    position: absolute;
+    left: 0;
+
+
 }
 
 ul li:hover > ul,
@@ -71,9 +56,94 @@ ul li ul:hover {
 }
 
 ul li ul li {
+    display: block;
+    font-size: 8px;
     clear: both;
     width: 100%;
+    padding: 5px 0 6px 5px;
 }
+
+ul li a {
+    color: white;
+    text-decoration: none;
+    white-space: nowrap;
+}
+
+ul li a:hover {
+    background: red;
+}
+
+ul li ul a {
+    /*color: #8a95a8;*/
+    color: gray;
+    font-weight: normal;
+}
+
+ul li ul a:hover {
+    background-color: transparent;
+    color: red;
+}
+
+ul li ul li:hover {
+    transform: translateX(15px);
+}
+
+ul li ul li:hover:before {
+    content: "";
+    position: absolute;
+    width: 5px;
+    height: 5px;
+    background: red;
+    border-radius: 50%;
+    left: -6px;
+    top: 6px;
+}
+
+.submenu {
+    position: relative;
+}
+
+.submenu ul {
+    top: 0;
+    left: 90%;
+    margin-top: -1px;
+}
+
+/*to add arrow to dropdown*/
+/*a:after{*/
+/*    content: "";*/
+/*    border: 4px solid transparent;*/
+/*    border-top: 4px solid white;*/
+/*    margin-left: 2px;*/
+/*    margin-bottom: 3px;*/
+/*    display: inline-block;*/
+/*    vertical-align: bottom;*/
+/*}*/
+li.submenu:after {
+    /*content: "";*/
+    display: block;
+    content: "";
+    width: 3px;
+    height: 5px;
+    position: absolute;
+    /* This will set the direction of the arrow.*/
+    top: 15%;
+    left: 86%;
+    background-repeat: no-repeat;
+    background-image: url("right-chevron.png");
+}
+
+.arrow {git
+    border: solid grey;
+    border-width: 0 1px 1px 0;
+    display: inline-block;
+    padding: 3px;
+}
+
+.right {
+    transform: rotate(-45deg);
+}
+
 
 
 
