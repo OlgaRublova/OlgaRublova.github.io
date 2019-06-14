@@ -1,3 +1,7 @@
+* {
+    box-sizing: border-box;
+}
+
 body {
     /*background-image: url("https://topfit.mikado-themes.com/wp-content/uploads/2017/01/h4-line-bckr-3.jpg?id=12548");*/
     /*background-image: url(https://topfit.mikado-themes.com/wp-content/uploads/2017/02/h2-slider-img-2.jpg);//back girl*/
@@ -11,10 +15,11 @@ body {
     font-family: 'Montserrat', sans-serif;
     margin: 0 auto;
     padding: 10px;
+    overflow: scroll;
 }
 
 /*main list*/
-ul {
+div#top-menu ul {
     list-style-type: none;
     font-size: 9px;
     text-transform: uppercase;
@@ -23,72 +28,73 @@ ul {
     padding: 12px 12px 3px 4px;
     left: 35%;
     position: absolute;
-
 }
 
-ul li {
+div#top-menu ul li {
     padding: 1px 12px 3px 4px;
     margin: 0 12px 3px 4px;
     display: inline-block;
     position: relative;
+
 }
 
 /*dropdown*/
-ul li ul {
+div#top-menu ul li ul {
     visibility: hidden;
     transition: all 0.1s linear;
     margin-top: 1rem;
     background: white;
-    width: 8rem;
+    min-width: 8rem;
     border-radius: 4px;
     position: absolute;
     left: 0;
-
-
 }
 
-ul li:hover > ul,
-ul li:focus-within > ul,
-ul li ul:hover {
+div#top-menu ul li:hover > ul,
+div#top-menu ul li:focus-within > ul,
+div#top-menu ul li ul:hover {
     visibility: visible;
     opacity: 1;
     display: block;
+    min-width: 100%;
+
+
 }
 
-ul li ul li {
+div#top-menu ul li ul li {
     display: block;
     font-size: 8px;
     clear: both;
-    width: 100%;
+    min-width: 100%;
     padding: 5px 0 6px 5px;
 }
 
-ul li a {
+div#top-menu ul li a {
     color: white;
     text-decoration: none;
     white-space: nowrap;
 }
 
-ul li a:hover {
+div#top-menu ul li a:hover {
     background: red;
 }
 
-ul li ul a {
-    /*color: #8a95a8;*/
+div#top-menu ul li ul a {
     color: gray;
     font-weight: normal;
 }
 
-ul li ul a:hover {
+div#top-menu ul li ul a:hover {
     background-color: transparent;
     color: red;
 }
 
-ul li ul li:hover {
+div#top-menu ul li ul li:hover {
     transform: translateX(15px);
+
 }
 
-ul li ul li:hover:before {
+div#top-menu ul li ul li:hover:before {
     content: "";
     position: absolute;
     width: 5px;
@@ -99,11 +105,11 @@ ul li ul li:hover:before {
     top: 6px;
 }
 
-.submenu {
+div#top-menu .submenu {
     position: relative;
 }
 
-.submenu ul {
+div#top-menu .submenu ul {
     top: 0;
     left: 86%;
     margin-top: -1px;
@@ -121,16 +127,15 @@ li.submenu:after {
     padding: 3px;
     transform: rotate(-45deg);
 }
-.vl {
-    border-left: 2px solid grey;
-    height: 30%;
-    position: absolute;
-    left: 50%;
-    margin-left: -3px;
-    top: 0;
-    visibility: hidden;
+
+h3 {
+    font-size: 8px;
+    padding: 0 0 6px 9px;
 }
 
 
 
+.container__list-multi:not(:last-child) {
+    border-right: solid 1px lightgray;
+}
 
