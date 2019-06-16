@@ -137,7 +137,6 @@ li.submenu:after {
 
 h3 {
     font-size: 12px;
-    /*padding-left: 8px;*/
     text-align: left;
     padding-left: 10px;
 }
@@ -185,7 +184,7 @@ h3 {
 .fas.fa-fire-alt, .fa.fa-trophy, .fas.fa-bolt {
     font-size: 40px;
     color: white;
-    padding-top: 10%;
+    padding-top: 12%;
     /*padding-left: 10%;*/
     margin-bottom: 20px;
 }
@@ -224,9 +223,55 @@ h3 {
     background-color: #f0494c;
 }
 
+.fas.fa-shopping-cart,
+.fas.fa-arrow-left{
+    font-weight: bold;
+    cursor: grab;
+    margin:5px;
+    color:white;
+    padding:2px;
+    font-size: 12px;
+}
+
+.button_shopping_cart,
+.button_left_arrow {
+    color:white;
+    border: none;
+    padding: 3px 8px 3px 8px;
+    display: block;
+    margin-bottom:10px;
+}
+
+
+.button_shopping_cart
+{
+    background-color: #ff1c4d;
+    text-transform: uppercase;
+    font-size: 12px;
+
+}
+.button_left_arrow {
+    background-color: black;
+    font-size: 10px;
+
+}
+.sticky{
+    position: fixed;
+    right:0;
+    top:56%;
+    z-index:10;
+}
+
+.fas.fa-shopping-cart:after,
+.fas.fa-arrow-left:after{
+    content:"";
+    border-right: 1px solid white;
+margin-left:5px;
+}
+
 .white_box {
-    width: 1690px;
-    height: 800px;
+    width: 1700px;
+    height: 700px;
     background-color: white;
     position: relative;
     left: -0.6%;
@@ -239,7 +284,7 @@ h1 {
     font-size: 20px;
 }
 
-h1:hover{
+h1:hover {
 
 }
 
@@ -266,5 +311,56 @@ h2:hover:after {
     border-bottom: 1px solid white;
 }
 
+.text {
+    border: 2px solid red;
+    width:45%;
+    line-height: 30px;
+    padding: 20px 40px 50px 20px;
+    position: absolute;
+    z-index: 10;
+    left: 10%;
+    top: 22%;
+    text-align: left;
+
+}
+.text h3{
+    font-size: 20px;
+    text-transform: uppercase;
+    letter-spacing: 8px;
+    padding-left: 3px;
+    padding-bottom: 15px;
+}
+
+.text h1{
+    font-size: 45px;
+    letter-spacing: 11px;
+    padding-bottom: 15px;
+
+}
+.text p{
+    color:gray;
+    padding-bottom: 15px;
+
+}
+.text .button{
+    background-color: #ee494a;
+    color:white;
+    padding: 10px 40px 10px 40px;
+    text-transform: uppercase;
+    font-weight: bold;
+    border-radius: 30px;
+    font-size: 10px;
+    cursor: grab;
+    margin-top: 15px;
+}
+.text .button:hover{
+    opacity:0.8;
+}
 
 
+.image {
+    position: absolute;
+    z-index: 10;
+    right: 10%;
+    top: 15%;
+}
