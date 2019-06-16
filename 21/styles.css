@@ -191,7 +191,7 @@ h3 {
 
 /*green_blue_red_wrapper*/
 .green_blue_red_wrapper {
-    width: 1700px;
+    width: 1750px;
     height: 450px;
     display: flex;
     justify-content: flex-start;
@@ -224,53 +224,54 @@ h3 {
 }
 
 .fas.fa-shopping-cart,
-.fas.fa-arrow-left{
+.fas.fa-arrow-left {
     font-weight: bold;
     cursor: grab;
-    margin:5px;
-    color:white;
-    padding:2px;
+    margin: 5px;
+    color: white;
+    padding: 2px;
     font-size: 12px;
 }
 
 .button_shopping_cart,
 .button_left_arrow {
-    color:white;
+    color: white;
     border: none;
     padding: 3px 8px 3px 8px;
     display: block;
-    margin-bottom:10px;
+    margin-bottom: 10px;
 }
 
 
-.button_shopping_cart
-{
+.button_shopping_cart {
     background-color: #ff1c4d;
     text-transform: uppercase;
     font-size: 12px;
 
 }
+
 .button_left_arrow {
     background-color: black;
     font-size: 10px;
 
 }
-.sticky{
+
+.sticky {
     position: fixed;
-    right:0;
-    top:56%;
-    z-index:10;
+    right: 0;
+    top: 56%;
+    z-index: 10;
 }
 
 .fas.fa-shopping-cart:after,
-.fas.fa-arrow-left:after{
-    content:"";
+.fas.fa-arrow-left:after {
+    content: "";
     border-right: 1px solid white;
-margin-left:5px;
+    margin-left: 5px;
 }
 
 .white_box {
-    width: 1700px;
+    width: 1750px;
     height: 700px;
     background-color: white;
     position: relative;
@@ -313,7 +314,7 @@ h2:hover:after {
 
 .text {
     border: 2px solid red;
-    width:45%;
+    width: 45%;
     line-height: 30px;
     padding: 20px 40px 50px 20px;
     position: absolute;
@@ -323,7 +324,8 @@ h2:hover:after {
     text-align: left;
 
 }
-.text h3{
+
+.text h3 {
     font-size: 20px;
     text-transform: uppercase;
     letter-spacing: 8px;
@@ -331,20 +333,22 @@ h2:hover:after {
     padding-bottom: 15px;
 }
 
-.text h1{
+.text h1 {
     font-size: 45px;
     letter-spacing: 11px;
     padding-bottom: 15px;
 
 }
-.text p{
-    color:gray;
+
+.text p {
+    color: gray;
     padding-bottom: 15px;
 
 }
-.text .button{
+
+.text .button {
     background-color: #ee494a;
-    color:white;
+    color: white;
     padding: 10px 40px 10px 40px;
     text-transform: uppercase;
     font-weight: bold;
@@ -353,14 +357,62 @@ h2:hover:after {
     cursor: grab;
     margin-top: 15px;
 }
-.text .button:hover{
-    opacity:0.8;
+
+.text .button:hover {
+    opacity: 0.8;
 }
 
 
 .image {
     position: absolute;
     z-index: 10;
-    right: 10%;
+    right: 6%;
     top: 15%;
+}
+
+.back {
+    background-image: url("https://topfit.mikado-themes.com/wp-content/uploads/2017/01/h4-parallax-1.jpg");
+    width: 1750px;
+    height: 400px;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: relative;
+    left: -0.6%;
+    top: 100%;
+    display: flex;
+    justify-content: center;
+    flex-flow: row nowrap;
+    color: white;
+
+}
+
+.item {
+    width: calc(100% / 6);
+    border: 1px solid turquoise;
+    padding: 5px;
+    text-align: center;
+    margin-left:25px;
+}
+
+.item h1 {
+    font-size: 16px;
+    letter-spacing: 5px;
+
+}
+
+.item p {
+    font-size: 13px;
+    line-height: 25px;
+
+
+}
+
+.item img {
+    margin-top: 25%;
+    margin-bottom: 10%;
+
+}
+
+.item img:hover {
+    transform: translateY(-25%);
 }
