@@ -249,14 +249,14 @@ li h3 {
     border: 0px solid transparent;
 }
 
-/*.despair {*/
-/*    animation: bounceInRight 3s linear forwards !important;*/
-/*}*/
+.despair {
+    animation: bounceInRight 3s linear forwards !important;
+}
 
-/*.despair h3 {*/
-/*    animation-delay: 5s;*/
-/*    animation: bounceInLeft 5s linear forwards !important;*/
-/*}*/
+.despair h3 {
+    animation-delay: 5s;
+    animation: bounceInLeft 5s linear forwards !important;
+}
 
 .bounceInRight {
     animation-name: bounceInRight;
