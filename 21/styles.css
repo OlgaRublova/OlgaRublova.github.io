@@ -130,6 +130,8 @@ li h3 {
     font-size: 14px;
     text-align: left;
     padding-left: 10px;
+    font-weight: bold;
+
 }
 
 
@@ -183,7 +185,6 @@ li h3 {
 /*Carousel*/
 .carousel-inner img {
     width: 100% !important;
-    height: 100% !important;
 
     background-position: left top;
     margin: 0 !important;
@@ -193,6 +194,7 @@ li h3 {
     width: 100% !important;
     overflow: visible !important;
     position: relative;
+    height: 700px;
 }
 
 .carousel-inner, .carousel-inner img:hover {
@@ -210,53 +212,59 @@ li h3 {
     position: absolute;
     top: 10%;
     left: 10%;
-    width:100%
     color: white;
     line-height: 50px !important;
+    font-weight: bold;
     text-transform: uppercase;
     text-align: left !important;
-    padding: 0 !important;
-    /*animation-fill-mode: both;*/
-    animation: bounceInRight 3s linear ;
-    /*animation-duration: 5s;*/
+    /*animation: none !important;*/
 }
 
-.carousel-caption h3{
-    font-size: 25px !important;
-    letter-spacing: 7px !important;
+/*.carousel-caption h1, .carousel-caption h3, .carousel-caption button {*/
+/*    animation: bounceInRight 3s linear forwards !important;*/
+/*}*/
 
-
+.carousel-caption h3 {
+    font-size: 15px !important;
+    letter-spacing: 4px !important;
+    margin-bottom: 5%;
 }
-.carousel-caption h1{
-    font-size: 90px !important;
+
+.carousel-caption h1 {
+    font-size: 60px !important;
     letter-spacing: 20px !important;
 }
 
-.carousel-caption h1:nth-child(1) {
-    animation-delay: 0.5s !important;
-}
-.carousel-caption h3:nth-child(2) {
-    animation-delay: 1s;
-}
-.carousel-caption h3:nth-child(3) {
-    animation-delay: 1.5s;
-}
-.carousel-caption h3:nth-child(4) {
-    animation-delay: 2s;
-}
-.carousel-caption h3:nth-child(5) {
-    animation-delay: 2.5s;
+.carousel-caption .button {
+    background-color: red;
+    color: white;
+    font-size: 13px;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    padding: 0 15px 0 15px !important;
+    margin-top: 5px;
+    border-radius: 30px;
+    cursor: grab;
+    border: 0px solid transparent;
 }
 
-
-/*.bounceInRight {*/
-    /*animation-name: bounceInRight;*/
+/*.despair {*/
+/*    animation: bounceInRight 3s linear forwards !important;*/
 /*}*/
+
+/*.despair h3 {*/
+/*    animation-delay: 5s;*/
+/*    animation: bounceInLeft 5s linear forwards !important;*/
+/*}*/
+
+.bounceInRight {
+    animation-name: bounceInRight;
+}
+
 @keyframes bounceInRight {
     from,
-    60%,
     75%,
-    90%,
     to {
         animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
     }
@@ -440,16 +448,18 @@ li h3 {
 }
 
 .white_box .text .button {
-    background-color: #ee494a;
+    background-color: red;
     color: white;
     font-size: 13px;
     font-weight: bold;
     text-transform: uppercase;
     letter-spacing: 1px;
-    padding: 10px 50px 10px 50px;
+    padding: 0 15px 0 15px !important;
     margin-top: 15px;
     border-radius: 30px;
     cursor: grab;
+    border: 0px solid transparent;
+
 }
 
 .white_box .text .button:hover {
@@ -524,7 +534,8 @@ li h3 {
     background-color: #f1f4ff;
 
 }
-.grey_box .text{
+
+.grey_box .text {
     color: black;
     text-transform: uppercase;
     font-weight: bolder;
