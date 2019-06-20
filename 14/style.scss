@@ -1,0 +1,241 @@
+//.container {
+//  width: 1000px;
+//  margin: 30px auto;
+//  color: white;
+//  font-size: 16px;
+//  background-color: #00CED1;
+//  display: grid;
+//  grid-template-rows: repeat(2, 150px);
+//  //grid-template-columns: repeat(2, 150px) 1fr;
+//  //grid-template-columns: 50% 1fr 1fr;
+//  grid-template-columns: repeat(3, 1fr);
+//
+//  grid-gap: 30px;
+//
+//}
+//
+//.item {
+//  padding: 20px;
+//
+//  &--1 {
+//    background-color: orangered;
+//    grid-row: 2 / 3;
+//    grid-column: 2 / 3;
+//    z-index: 10;
+//
+//    //grid-row-start: 2;
+//    //grid-row-end: 3;
+//    //grid-column-start: 2;
+//    //grid-column-end:3;
+//  }
+//
+//  &--2 {
+//    background-color: yellowgreen;
+//    //grid-column: 1 / span 2;
+//    grid-column: 2 / -1; //-1 represents the whole way until the end of the column
+//  }
+//
+//  &--3 {
+//    background-color: blueviolet;
+//    grid-row: 2 / 3;
+//    grid-column: 1 / 3;
+//  }
+//
+//  &--4 {
+//    background-color: palevioletred;
+//  }
+//
+//  &--5 {
+//    background-color: royalblue;
+//    grid-row: 1 / 3;
+//    grid-column: 3 / 4;
+//    //grid-area: 1 / 3 / 2 /4; start-row start-column end-row end--column
+//  }
+//
+//  &--6 {
+//    background-color: darkgoldenrod;
+//    grid-row: 1 / 2;
+//    grid-column: 2 / 3;
+//  }
+}
+
+//METHOD 1 - NUMBERS
+
+//.container2 {
+//  width: 800px;
+//  height: 900px;
+//  margin: 30px auto;
+//  color: white;
+//  font-size: 16px;
+//  background-color: orange;
+//  display: grid;
+//  grid-template-rows: 0.4fr 0.6fr  1.2fr  0.4fr;
+//  grid-template-columns: repeat(3, 2fr) 1.9fr;
+//
+//  grid-gap: 30px;
+//
+//}
+//
+//.item-add {
+//  padding: 20px;
+//  background-color: red;
+//
+//  &--1 {
+//    grid-row:  1 /  2;
+//    grid-column: 1 / -1;
+//  }
+//
+//  &--2 {
+//    grid-row: 2 / 3;
+//    grid-column: 1 / 2;
+//  }
+//
+//  &--3 {
+//    grid-row: 2 / 3;
+//    grid-column: 2 / 3;
+//  }
+//
+//  &--4 {
+//    grid-row: 2 / 3;
+//    grid-column: 3 / 4;
+//  }
+//
+//  &--5 {
+//    grid-row: 3 / 4;
+//    grid-column: 1 / 4;
+//  }
+//
+//  &--6 {
+//    grid-row: 2 / 4;
+//    grid-column: 4 / -1;
+//  }
+//
+//  &--7 {
+//    grid-row: 4 / 5;
+//    grid-column: 1 / -1;
+//  }
+//}
+
+////METHOD 2 - NAME TEMPLATE AREAS
+//.container2 {
+//  width: 800px;
+//  height: 900px;
+//  margin: 30px auto;
+//  color: white;
+//  font-size: 16px;
+//  background-color: orange;
+//  display: grid;
+//  grid-template-rows: [header-start] 0.4fr [header-end box-start] 0.6fr [box-end main-start] 1.2fr [main-end footer-start] 0.4fr [footer-end];
+//  grid-template-columns: repeat(3, [col-start] 2fr [col-end]) 1.9fr [grid-end];
+//
+//  grid-gap: 30px;
+//
+//}
+//
+//.item-add {
+//  padding: 20px;
+//  background-color: red;
+//
+//  &--1 {
+//        grid-row: header-start 1 /  header-end box-start 2;
+//        grid-column: col-start 1 / grid-end -1;
+//      }
+//
+//      &--2 {
+//        grid-row: header-end box-start 2 / box-end main-start 3;
+//        grid-column: 1 / 2;
+//      }
+//
+//      &--3 {
+//        grid-row: 2 / 3;
+//        grid-column: 2 / 3;
+//      }
+//
+//      &--4 {
+//        grid-row: 2 / 3;
+//        grid-column: 3 / 4;
+//      }
+//
+//      &--5 {
+//        grid-row: 3 / 4;
+//        grid-column: 1 / 4;
+//      }
+//
+//      &--6 {
+//        grid-row: 2 / 4;
+//        grid-column: 4 / -1;
+//      }
+//
+//      &--7 {
+//        grid-row: 4 / 5;
+//        grid-column: 1 / -1;
+//      }
+
+//
+//METHOD 3 - NAME GRID AREAS
+.container2 {
+  width: 800px;
+  height: 900px;
+  margin: 30px auto;
+  color: white;
+  font-size: 16px;
+  background-color: orange;
+  display: grid;
+  grid-template-rows: 0.4fr 0.6fr 1.2fr 0.4fr;
+  grid-template-columns: repeat(3, 2fr) 1.9fr;
+  grid-gap: 30px;
+
+  grid-template-areas: ". head head ." "box1 box2 box3 side" "main main main side" "foot foot foot foot"; //!!!!
+}
+
+.item-add {
+  padding: 20px;
+  background-color: red;
+
+  &--1 {
+    grid-area: head;
+  }
+
+  &--2 {
+    grid-area: box1;
+  }
+
+  &--3 {
+    grid-area: box2;
+  }
+
+  &--4 {
+    grid-area: box3;
+  }
+
+  &--5 {
+    grid-area: main;
+  }
+
+  &--6 {
+    grid-area: side;
+  }
+
+  &--7 {
+    grid-area: foot;
+  }
+}
+
+.wrapper {
+  width: 1000px;
+  margin: 30px auto;
+  background-color: blue;
+
+  display: grid !important;
+  grid-template-rows: repeat(2, 150px);
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 30px;
+
+  .list-add {
+    padding: 20px;
+    color: white;
+    font-family: "Lato", sans-serif;
+    font-size: 30px;
+    background-color: orangered;
+  }
+}

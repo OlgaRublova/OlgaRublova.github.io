@@ -1,17 +1,18 @@
-@import "abstracts/functions";
-@import "abstracts/mixins";
-@import "abstracts/variables";
+@import "abstracts/functions",
+        "abstracts/mixins",
+        "abstracts/variables";
 
-@import "base/animation";
-@import "base/base";
-@import "base/typograph";
-@import "base/utilities";
+@import "base/animation",
+        "base/base",
+        "base/typograph",
+        "base/utilities";
 
 @import "components/button";
 
 @import "pages/home";
-@import "layout/header";
-@import "layout/grid";
+
+@import "layout/header",
+        "layout/grid";
 
 
 
